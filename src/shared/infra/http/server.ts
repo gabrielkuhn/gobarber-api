@@ -1,13 +1,11 @@
-import 'reflect-metadata'
-
-import express, { Request, Response, NextFunction } from 'express'
-import 'express-async-errors'
 import cors from 'cors'
+import express, { NextFunction, Request, Response } from 'express'
+import 'express-async-errors'
+import 'reflect-metadata'
+import uploadConfig from '@config/upload'
+import '@shared/infra/typeorm'
+import AppError from '@shared/errors/AppError'
 import routes from './routes'
-import uploadConfig from './config/upload'
-import AppError from './errors/AppError'
-
-import './database'
 
 const app = express()
 
