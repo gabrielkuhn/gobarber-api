@@ -1,9 +1,9 @@
-import User from '@modules/users/infra/typeorm/entities/User'
-import path from 'path'
 import uploadConfig from '@config/upload'
-import fs from 'fs'
-import { inject, injectable } from 'tsyringe'
+import User from '@modules/users/infra/typeorm/entities/User'
 import AppError from '@shared/errors/AppError'
+import fs from 'fs'
+import path from 'path'
+import { inject, injectable } from 'tsyringe'
 import IUsersRepository from '../repositories/IUsersRepository'
 
 interface IRequest {
