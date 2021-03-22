@@ -1,14 +1,17 @@
-import cors from 'cors'
-import express, { NextFunction, Request, Response } from 'express'
-import 'express-async-errors'
 import 'reflect-metadata'
+import 'dotenv/config'
+
+import express, { NextFunction, Request, Response } from 'express'
+import cors from 'cors'
+import { errors } from 'celebrate'
+import 'express-async-errors'
+
 import uploadConfig from '@config/upload'
 import AppError from '@shared/errors/AppError'
 import routes from './routes'
 
 import '@shared/infra/typeorm'
 import '@shared/container'
-import { errors } from 'celebrate'
 
 const app = express()
 
